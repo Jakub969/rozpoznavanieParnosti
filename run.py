@@ -4,7 +4,7 @@ from train.train_model import train_and_evaluate
 
 def main():
     print("Generujem dataset...")
-    generate_dataset(num_images=5000, output_dir="dataset_shapes")
+    generate_dataset(num_images=10000, output_dir="dataset_shapes")
 
     print("Budujem model...")
     model = build_model(input_shape=(28, 28, 1))

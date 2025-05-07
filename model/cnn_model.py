@@ -1,12 +1,12 @@
+# noinspection PyUnresolvedReferences
 from tensorflow import keras
+# noinspection PyUnresolvedReferences
 from tensorflow.keras import layers
 
 def build_model(input_shape):
-    # Definuj augmentáciu
+    # augmentacia
     data_augmentation = keras.Sequential([
-        layers.RandomFlip("horizontal"),
-        layers.RandomRotation(0.1),
-        layers.RandomZoom(0.1),
+        layers.RandomFlip("horizontal_and_vertical"),
     ])
 
     model = keras.Sequential([
@@ -19,6 +19,8 @@ def build_model(input_shape):
         layers.Dense(64, activation='relu'),
         layers.Dense(1, activation='sigmoid')  # 1 neuron pre binárnu klasifikáciu
     ])
+    #bez pool
+    #plne prepojenu
 
     model.compile(optimizer='adam',
                   loss='binary_crossentropy',

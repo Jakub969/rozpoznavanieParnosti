@@ -2,9 +2,8 @@ import numpy as np
 import os
 from tqdm import tqdm
 
-# Nastavenia
 IMAGE_SIZE = 28
-NUM_IMAGES = 5000  # počet obrázkov na generovanie
+NUM_IMAGES = 5000
 OUTPUT_DIR = ""
 
 # Vytvorenie adresárov
@@ -13,8 +12,6 @@ os.makedirs(os.path.join(OUTPUT_DIR, "images"), exist_ok=True)
 # Polia na uloženie dát a labelov
 images = []
 labels = []
-
-print("Generujem dataset...")
 
 for i in tqdm(range(NUM_IMAGES)):
     # Generovanie náhodného binárneho obrázka
