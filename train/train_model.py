@@ -1,9 +1,9 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
-##import tensorflow as tf
-##from tensorflow import keras
-##from tensorflow.keras import layers
+from tensorflow.keras.callbacks import EarlyStopping  # <- callback
+# from tensorflow import keras
+# from tensorflow.keras import layers
 
 def train_and_evaluate(model, dataset_path):
     # Load data
@@ -14,9 +14,21 @@ def train_and_evaluate(model, dataset_path):
 
     X_train, X_test, y_train, y_test = train_test_split(images, labels, test_size=0.2, random_state=42)
 
+    # EarlyStopping callback
+    early_stopping = EarlyStopping(
+        monitor='val_loss',
+        patience=3,
+        restore_best_weights=True
+    )
+
     # Training
-    #batchsize 64
-    history = model.fit(X_train, y_train, epochs=40, batch_size=64, validation_split=0.2, validation_data=(X_test, y_test))
+    history = model.fit(
+        X_train, y_train,
+        epochs=40,
+        batch_size=64,
+        validation_data=(X_test, y_test),
+        callbacks=[early_stopping]
+    )
 
     # Evaluate
     test_loss, test_accuracy = model.evaluate(X_test, y_test)
@@ -37,8 +49,11 @@ def train_and_evaluate(model, dataset_path):
 
     # Accuracy
     plt.subplot(1, 2, 2)
-    plt.plot(history.history['accuracy'], label='Tréningová presnosť')
-    plt.plot(history.history['val_accuracy'], label='Validačná presnosť')
+    acc_key = 'accuracy' if 'accuracy' in history.history else 'acc'
+    val_acc_key = 'val_accuracy' if 'val_accuracy' in history.history else 'val_acc'
+
+    plt.plot(history.history[acc_key], label='Tréningová presnosť')
+    plt.plot(history.history[val_acc_key], label='Validačná presnosť')
     plt.title('Presnosť (Accuracy) počas tréningu')
     plt.xlabel('Epochy')
     plt.ylabel('Presnosť')
