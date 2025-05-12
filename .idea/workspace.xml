@@ -4,8 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d0cef18c-56ae-41d8-b0c1-8a80c93a091c" name="Changes" comment="pridanie early stopping a fcnn">
+    <list default="true" id="d0cef18c-56ae-41d8-b0c1-8a80c93a091c" name="Changes" comment="grafy priebehu">
+      <change afterPath="$PROJECT_DIR$/dataset/split_dataset.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/generate_dataset_with_shapes.py" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/generate_dataset_with_shapes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/cnn_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/cnn_model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run.py" beforeDir="false" afterPath="$PROJECT_DIR$/run.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/train/train_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/train/train_model.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -164,7 +169,9 @@
       <workItem from="1745849028570" duration="1460000" />
       <workItem from="1746606415561" duration="4455000" />
       <workItem from="1746774586498" duration="502000" />
-      <workItem from="1746982536459" duration="736000" />
+      <workItem from="1746982536459" duration="1146000" />
+      <workItem from="1747035087651" duration="2560000" />
+      <workItem from="1747057280303" duration="5084000" />
     </task>
     <task id="LOCAL-00001" summary="Založenie projektu">
       <option name="closed" value="true" />
@@ -190,7 +197,15 @@
       <option name="project" value="LOCAL" />
       <updated>1746610345231</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="grafy priebehu">
+      <option name="closed" value="true" />
+      <created>1746983712623</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1746983712623</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -200,11 +215,12 @@
     <MESSAGE value="Založenie projektu" />
     <MESSAGE value="upravenie podľa konzultacie na cvičeniach" />
     <MESSAGE value="pridanie early stopping a fcnn" />
-    <option name="LAST_COMMIT_MESSAGE" value="pridanie early stopping a fcnn" />
+    <MESSAGE value="grafy priebehu" />
+    <option name="LAST_COMMIT_MESSAGE" value="grafy priebehu" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/rozpoznavanieParnosti$visualize_dataset.coverage" NAME="visualize_dataset Coverage Results" MODIFIED="1746609812092" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dataset" />
     <SUITE FILE_PATH="coverage/rozpoznavanieParnosti$main.coverage" NAME="main Coverage Results" MODIFIED="1746607289839" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/rozpoznavanieParnosti$visualize_dataset__1_.coverage" NAME="visualize_dataset (1) Coverage Results" MODIFIED="1746983284102" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/rozpoznavanieParnosti$visualize_dataset__1_.coverage" NAME="visualize_dataset (1) Coverage Results" MODIFIED="1747035385232" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

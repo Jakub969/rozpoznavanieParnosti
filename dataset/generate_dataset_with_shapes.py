@@ -18,6 +18,7 @@ def generate_dataset(num_images=5000, output_dir="dataset_shapes"):
     # Polia na uloženie dát a labelov
     images = []
     labels = []
+    types = []
 
     for i in tqdm(range(num_images)):
         img_type = random.choice(TYPES)
@@ -54,6 +55,7 @@ def generate_dataset(num_images=5000, output_dir="dataset_shapes"):
 
         images.append(img_np)
         labels.append(label)
+        types.append(img_type)
 
     # Konverzia na numpy array
     images = np.array(images)
@@ -62,5 +64,6 @@ def generate_dataset(num_images=5000, output_dir="dataset_shapes"):
     # Uloženie datasetu
     np.save(os.path.join(output_dir, "images.npy"), images)
     np.save(os.path.join(output_dir, "labels.npy"), labels)
+    np.save(os.path.join(output_dir, "types.npy"), np.array(types))
 
     print(f"Dataset s tvarmi bol úspešne vygenerovaný! {num_images} obrázkov uložených v {output_dir}")
