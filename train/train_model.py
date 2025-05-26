@@ -21,41 +21,41 @@ def train_and_evaluate(model, dataset_path, data_subset="all"):
         images = np.load(f"{dataset_path}/images.npy")
         labels = np.load(f"{dataset_path}/labels.npy")
 
-    # Prevod labelov na one-hot vektor [1, 0] = nepárny, [0, 1] = párny
+    # Prevod labelov na one-hot
     labels = to_categorical(labels, num_classes=2)
 
-    # Predspracovanie
-    images = images.reshape((-1, 28, 28, 1)).astype('float32')
+    # Automatická detekcia veľkosti obrázku
+    image_size = images.shape[1]
+    images = images.reshape((-1, image_size, image_size, 1)).astype('float32')
 
     # Rozdelenie dát
     X_train, X_test, y_train, y_test = train_test_split(
         images, labels, test_size=0.2, random_state=42)
 
-    # EarlyStopping callback
+    # EarlyStopping
     early_stopping = EarlyStopping(
         monitor='val_loss',
         patience=20,
         restore_best_weights=True
     )
 
-    # Tréning modelu
+    # Tréning
     history = model.fit(
         X_train, y_train,
         epochs=100,
-        batch_size=64,
+        batch_size=256,
         validation_data=(X_test, y_test),
         callbacks=[early_stopping]
     )
 
-    # Vyhodnotenie modelu
+    # Vyhodnotenie
     test_loss, test_accuracy = model.evaluate(X_test, y_test)
     print(f"\nTest loss: {test_loss:.4f}")
     print(f"Test accuracy: {test_accuracy:.4f}")
 
-    # Vizualizácia priebehu tréningu
+    # Grafy
     plt.figure(figsize=(12, 5))
 
-    # Loss
     plt.subplot(1, 2, 1)
     plt.plot(history.history['loss'], label='Tréningová loss')
     plt.plot(history.history['val_loss'], label='Validačná loss')
@@ -64,7 +64,6 @@ def train_and_evaluate(model, dataset_path, data_subset="all"):
     plt.ylabel('Loss')
     plt.legend()
 
-    # Accuracy
     plt.subplot(1, 2, 2)
     plt.plot(history.history['accuracy'], label='Tréningová presnosť')
     plt.plot(history.history['val_accuracy'], label='Validačná presnosť')
@@ -77,4 +76,5 @@ def train_and_evaluate(model, dataset_path, data_subset="all"):
     plt.show()
 
     # Uloženie modelu
-    #model.save(f"parnost_model_{data_subset}.h5")
+    model.save(f"parnost_model_{data_subset}_{image_size}x{image_size}.h5")
+
