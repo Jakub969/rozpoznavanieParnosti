@@ -10,6 +10,7 @@ def build_model(input_shape, l2_lambda=0.001):
         layers.RandomFlip("horizontal_and_vertical"),
     ])
     """
+    #Regresný prístup
     #S pool
     """
     model = keras.Sequential([
@@ -36,6 +37,7 @@ def build_model(input_shape, l2_lambda=0.001):
                   loss='binary_crossentropy',
                   metrics=['accuracy'])
     """
+    #Klasifikačný prístup
     model = keras.Sequential([
         layers.Conv2D(32, (3, 3), activation='relu', padding='same',
                       kernel_regularizer=regularizers.l2(l2_lambda),

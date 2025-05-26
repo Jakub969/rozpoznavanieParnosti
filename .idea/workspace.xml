@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d0cef18c-56ae-41d8-b0c1-8a80c93a091c" name="Changes" comment="grafy priebehu">
-      <change afterPath="$PROJECT_DIR$/dataset/split_dataset.py" afterDir="false" />
+    <list default="true" id="d0cef18c-56ae-41d8-b0c1-8a80c93a091c" name="Changes" comment="zmena na klasifikačnú úlohu">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/generate_dataset_with_shapes.py" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/generate_dataset_with_shapes.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/cnn_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/cnn_model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/fcnn_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/fcnn_model.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run.py" beforeDir="false" afterPath="$PROJECT_DIR$/run.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/train/train_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/train/train_model.py" afterDir="false" />
     </list>
@@ -172,6 +171,8 @@
       <workItem from="1746982536459" duration="1146000" />
       <workItem from="1747035087651" duration="2560000" />
       <workItem from="1747057280303" duration="5084000" />
+      <workItem from="1747071647168" duration="122000" />
+      <workItem from="1748253518248" duration="2102000" />
     </task>
     <task id="LOCAL-00001" summary="Založenie projektu">
       <option name="closed" value="true" />
@@ -205,7 +206,15 @@
       <option name="project" value="LOCAL" />
       <updated>1746983712623</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="zmena na klasifikačnú úlohu">
+      <option name="closed" value="true" />
+      <created>1747071748434</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1747071748434</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -216,7 +225,8 @@
     <MESSAGE value="upravenie podľa konzultacie na cvičeniach" />
     <MESSAGE value="pridanie early stopping a fcnn" />
     <MESSAGE value="grafy priebehu" />
-    <option name="LAST_COMMIT_MESSAGE" value="grafy priebehu" />
+    <MESSAGE value="zmena na klasifikačnú úlohu" />
+    <option name="LAST_COMMIT_MESSAGE" value="zmena na klasifikačnú úlohu" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/rozpoznavanieParnosti$visualize_dataset.coverage" NAME="visualize_dataset Coverage Results" MODIFIED="1746609812092" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dataset" />

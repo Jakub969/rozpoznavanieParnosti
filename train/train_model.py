@@ -77,4 +77,4 @@ def train_and_evaluate(model, dataset_path, data_subset="all"):
     plt.show()
 
     # Uloženie modelu
-    model.save(f"parnost_model_{data_subset}.h5")
+    #model.save(f"parnost_model_{data_subset}.h5")
