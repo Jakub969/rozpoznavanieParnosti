@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d0cef18c-56ae-41d8-b0c1-8a80c93a091c" name="Changes" comment="Použitie klasifikačného prístupu na fcnn">
-      <change afterPath="$PROJECT_DIR$/dataset/generate_big_noise_dataset.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dataset/generate_noise_only_dataset.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/big_input_shape_cnn.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/train/evaluate_crossdomain.py" afterDir="false" />
+    <list default="true" id="d0cef18c-56ae-41d8-b0c1-8a80c93a091c" name="Changes" comment="zmena na 256 batch size">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/cnn_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/cnn_model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/fcnn_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/fcnn_model.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run.py" beforeDir="false" afterPath="$PROJECT_DIR$/run.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/train/train_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/train/train_model.py" afterDir="false" />
     </list>
@@ -49,21 +47,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.main.executor&quot;: &quot;Run&quot;,
-    &quot;Python.visualize_dataset (1).executor&quot;: &quot;Run&quot;,
-    &quot;Python.visualize_dataset.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.main.executor": "Run",
+    "Python.visualize_dataset (1).executor": "Run",
+    "Python.visualize_dataset.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/jakub/Desktop/Jakub/HSU",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\jakub\Desktop\Jakub\HSU\rozpoznavanieParnosti" />
@@ -174,7 +173,8 @@
       <workItem from="1747035087651" duration="2560000" />
       <workItem from="1747057280303" duration="5084000" />
       <workItem from="1747071647168" duration="122000" />
-      <workItem from="1748253518248" duration="7504000" />
+      <workItem from="1748253518248" duration="7950000" />
+      <workItem from="1748349664738" duration="9189000" />
     </task>
     <task id="LOCAL-00001" summary="Založenie projektu">
       <option name="closed" value="true" />
@@ -224,7 +224,15 @@
       <option name="project" value="LOCAL" />
       <updated>1748256642335</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="zmena na 256 batch size">
+      <option name="closed" value="true" />
+      <created>1748263024834</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1748263024834</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -237,11 +245,12 @@
     <MESSAGE value="grafy priebehu" />
     <MESSAGE value="zmena na klasifikačnú úlohu" />
     <MESSAGE value="Použitie klasifikačného prístupu na fcnn" />
-    <option name="LAST_COMMIT_MESSAGE" value="Použitie klasifikačného prístupu na fcnn" />
+    <MESSAGE value="zmena na 256 batch size" />
+    <option name="LAST_COMMIT_MESSAGE" value="zmena na 256 batch size" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/rozpoznavanieParnosti$visualize_dataset.coverage" NAME="visualize_dataset Coverage Results" MODIFIED="1746609812092" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dataset" />
     <SUITE FILE_PATH="coverage/rozpoznavanieParnosti$main.coverage" NAME="main Coverage Results" MODIFIED="1746607289839" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/rozpoznavanieParnosti$visualize_dataset__1_.coverage" NAME="visualize_dataset (1) Coverage Results" MODIFIED="1747035385232" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/rozpoznavanieParnosti$visualize_dataset__1_.coverage" NAME="visualize_dataset (1) Coverage Results" MODIFIED="1748350122823" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

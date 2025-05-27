@@ -21,6 +21,9 @@ def train_and_evaluate(model, dataset_path, data_subset="all"):
         images = np.load(f"{dataset_path}/images.npy")
         labels = np.load(f"{dataset_path}/labels.npy")
 
+    #Labely pre regresiu
+    #labels = labels.astype(np.float32)
+
     # Prevod labelov na one-hot
     labels = to_categorical(labels, num_classes=2)
 
@@ -43,7 +46,7 @@ def train_and_evaluate(model, dataset_path, data_subset="all"):
     history = model.fit(
         X_train, y_train,
         epochs=100,
-        batch_size=256,
+        batch_size=64,
         validation_data=(X_test, y_test),
         callbacks=[early_stopping]
     )
@@ -76,5 +79,5 @@ def train_and_evaluate(model, dataset_path, data_subset="all"):
     plt.show()
 
     # Uloženie modelu
-    model.save(f"parnost_model_{data_subset}_{image_size}x{image_size}.h5")
+    #model.save(f"parnost_model_{data_subset}_{image_size}x{image_size}.h5")
 

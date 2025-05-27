@@ -17,6 +17,7 @@ def build_fcnn_model(input_shape=(28, 28, 1), l2_lambda=0.001):
         metrics=['accuracy']
     )
     """
+
     #Klasifikačný prístup
     model = keras.Sequential([
         layers.Flatten(input_shape=input_shape),
@@ -26,7 +27,7 @@ def build_fcnn_model(input_shape=(28, 28, 1), l2_lambda=0.001):
                      kernel_regularizer=regularizers.l2(l2_lambda)),
         layers.Dense(2, activation='softmax')  # 2 triedy: [1,0] = nepárny, [0,1] = párny
     ])
-
+    
     model.compile(
         optimizer='adam',
         loss='categorical_crossentropy',

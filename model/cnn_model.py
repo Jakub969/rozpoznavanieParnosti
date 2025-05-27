@@ -20,7 +20,7 @@ def build_model(input_shape, l2_lambda=0.001):
         layers.MaxPooling2D((2,2)),
         layers.Flatten(),
         layers.Dense(64, activation='relu'),
-        layers.Dense(1, activation='sigmoid')  # 1 neuron pre binárnu klasifikáciu
+        layers.Dense(1, activation='sigmoid')
     ])
     """
     #bez pool
@@ -36,6 +36,27 @@ def build_model(input_shape, l2_lambda=0.001):
     model.compile(optimizer='adam',
                   loss='binary_crossentropy',
                   metrics=['accuracy'])
+    """
+    #Bez pool
+    """
+    model = keras.Sequential([
+        layers.Conv2D(32, (3, 3), activation='relu',
+                      kernel_regularizer=regularizers.l2(l2_lambda),
+                      input_shape=input_shape),
+        layers.Conv2D(64, (3, 3), activation='relu',
+                      kernel_regularizer=regularizers.l2(l2_lambda)),
+        layers.Flatten(),
+        layers.Dense(64, activation='relu',
+                     kernel_regularizer=regularizers.l2(l2_lambda)),
+        layers.Dense(1, activation='sigmoid',
+                     kernel_regularizer=regularizers.l2(l2_lambda))
+    ])
+
+    model.compile(
+        optimizer='adam',
+        loss='binary_crossentropy',
+        metrics=['accuracy']
+    )
     """
     #Klasifikačný prístup
     model = keras.Sequential([
